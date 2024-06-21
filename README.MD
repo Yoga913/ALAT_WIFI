@@ -4,7 +4,7 @@
    - install git dari [situs resmi git](https://git-scm.com/).
 2. **Instalasi aplikasi di cmd/powershell** :
 
-   - git clone https://github.com/Yoga913/ALAT_WIFI/new/main
+   - git clone https://github.com/Yoga913/ALAT_WIFI
 
 3. **Install Dependencies di cmd/powershel**:
 
