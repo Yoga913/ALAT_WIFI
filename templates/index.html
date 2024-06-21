@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alat Wifi</title>
+     <!--Bootstrap CSS-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Alat Wifi</h1>
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('check_host_windows')">Periksa Host Windows</button>
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('list_ssids')">Daftar SSID Tersedia</button>
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('list_profiles')">Daftar Profil</button>
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('list_blocked_aps')">Daftar AP Terblokir</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('show_interface')">Tampilkan Antarmuka Saat Ini</button>
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('full_report')">Buat Laporan Lengkap</button>
+                        <input type="text" id="ap_name" class="form-control mb-2" placeholder="Masukkan Nama AksesPoin">
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('show_cleartext')">Tampilkan Password Cleartext</button>
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('dump_profiles')">Dump Profil Enkripsi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre id="output" class="mt-4 p-3 border rounded"></pre>
+    </div>
+    <!-- Bootstrap JS dan dependensi -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+<!--===========================================================================================================================-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alat Wifi</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Alat Wifi</h1>
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('check_host_windows')">Check Host Windows</button>
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('list_ssids')">List Available SSIDs</button>
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('list_profiles')">List Profiles</button>
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('list_blocked_aps')">List Blocked APs</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('show_interface')">Show Current Interface</button>
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('full_report')">Generate Full Report</button>
+                        <input type="text" id="ap_name" class="form-control mb-2" placeholder="Enter AP Name">
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('show_cleartext')">Show Cleartext Password</button>
+                        <button class="btn btn-primary btn-block mb-2" onclick="executeAction('dump_profiles')">Dump Encrypted Profiles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre id="output" class="mt-4 p-3 border rounded"></pre>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+-->
